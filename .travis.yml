@@ -1,0 +1,16 @@
+language: python
+
+python:
+  # Produce different output:
+  # - "3.2"
+  # - "3.3"
+  - "3.4"
+  - "3.5"
+  # Travis failed to install Python 3.6
+  # - "3.6"
+
+install:
+  - "pip install -e '.[test]'"
+
+script:
+  - "make check"

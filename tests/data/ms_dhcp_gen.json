@@ -1,0 +1,81 @@
+[
+  {
+    "_complemented_entries": [
+      "hostname"
+    ],
+    "_input_format": "ms_dhcp",
+    "_raw_input": "192.0.2.23, android-id.example.com, 12.04.2016 07:19:27, DHCP, 00508b65d907, ",
+    "fqdn": "android-id.example.com",
+    "hostname": "android-id",
+    "ip_addresses": [
+      "192.0.2.23"
+    ],
+    "mac_addresses": [
+      "00:50:8b:65:d9:07"
+    ]
+  },
+  {
+    "_complemented_entries": [
+      "hostname"
+    ],
+    "_input_format": "ms_dhcp",
+    "_raw_input": "192.0.2.25, DAP-2310.example.com, Reservierung (aktiv), DHCP, 685d4351adcf, AP05",
+    "description": "AP05",
+    "fqdn": "dap-2310.example.com",
+    "hostname": "dap-2310",
+    "ip_addresses": [
+      "192.0.2.25"
+    ],
+    "mac_addresses": [
+      "68:5d:43:51:ad:cf"
+    ]
+  },
+  {
+    "_complemented_entries": [
+      "hostname"
+    ],
+    "_input_format": "ms_dhcp",
+    "_raw_input": "192.0.2.26, DAP-2310.example.com, Reservierung (aktiv), DHCP, a402b9b22adc, AP06",
+    "description": "AP06",
+    "fqdn": "dap-2310.example.com",
+    "hostname": "dap-2310",
+    "ip_addresses": [
+      "192.0.2.26"
+    ],
+    "mac_addresses": [
+      "a4:02:b9:b2:2a:dc"
+    ]
+  },
+  {
+    "_complemented_entries": [
+      "hostname"
+    ],
+    "_input_format": "ms_dhcp",
+    "_raw_input": "192.0.2.24, edv1-01.example.com, 12.04.2016 12:06:45, DHCP, d8d385116f84, ",
+    "fqdn": "edv1-01.example.com",
+    "hostname": "edv1-01",
+    "ip_addresses": [
+      "192.0.2.24"
+    ],
+    "mac_addresses": [
+      "d8:d3:85:11:6f:84"
+    ]
+  },
+  {
+    "_complemented_entries": [
+      "hostname"
+    ],
+    "_input_format": "ms_dhcp",
+    "_raw_input": "192.0.2.42, printer01.example.com, Reservierung (aktiv), DHCP, 0002a59ed73e, Example Printer",
+    "description": "Example Printer",
+    "fqdn": "printer01.example.com",
+    "hostname": "printer01",
+    "ip_addresses": [
+      "192.0.2.42"
+    ],
+    "mac_addresses": [
+      "00:02:a5:9e:d7:3e"
+    ],
+    "paedml_linux_type": "ipmanagedclient"
+  }
+]
