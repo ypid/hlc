@@ -1,10 +1,13 @@
 hlc
 ===
 
-|Build Status| |License| |Python versions| |dev status| |pypi monthly downloads|
+|Build Status| |Version| |License| |Python versions| |dev status| |pypi monthly downloads|
 
 .. |Build Status| image:: https://travis-ci.org/ypid/hlc.svg
    :target: https://travis-ci.org/ypid/hlc
+
+.. |Version| image:: https://img.shields.io/pypi/v/hlc.svg
+   :target: https://pypi.python.org/pypi/hlc
 
 .. |License| image:: https://img.shields.io/pypi/l/hlc.svg
    :target: https://pypi.python.org/pypi/hlc
@@ -78,7 +81,7 @@ Install
 
 You can install hlc by invoking the following commands:
 
-.. code-block:: console
+.. code-block:: bash
 
    gpg --recv-keys 'C505 B5C9 3B0D B3D3 38A1  B600 5FE9 2C12 EE88 E1F0'
    mkdir --parent /tmp/hlc && cd /tmp/hlc
@@ -91,7 +94,7 @@ Refer to `Verifying PyPI and Conda Packages`_ for more details.
 Or if you feel lazy and agree that `pip/issues/1035 <https://github.com/pypa/pip/issues/1035>`_
 should be fixed you can also install hlc like this:
 
-.. code-block:: console
+.. code-block:: bash
 
    pip3 install hlc
 
