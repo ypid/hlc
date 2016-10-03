@@ -102,6 +102,6 @@ pypi-upload: build
 	twine upload -r "$(PYPI_REPO)" dist_signed/*
 
 .PHONY: release
-release: release-prepare pypi-upload
+release: release-prepare pypi-register pypi-upload
 
 ## }}}
