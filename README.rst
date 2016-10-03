@@ -73,6 +73,28 @@ Synopsis
                            The first column is a case insensitive search pattern,
                            the second one the replacement string.
 
+Install
+-------
+
+You can install hlc by invoking the following commands:
+
+.. code-block:: console
+
+   gpg --recv-keys 'C505 B5C9 3B0D B3D3 38A1  B600 5FE9 2C12 EE88 E1F0'
+   mkdir --parent /tmp/hlc && cd /tmp/hlc
+   wget -r -nd -l 1 https://pypi.python.org/pypi/hlc --accept-regex '^https://(test)?pypi.python.org/packages/.*\.whl.*'
+   current_release="$(find . -type f -name '*.whl' | sort | tail -n 1)"
+   gpg -v "${current_release}.asc" && pip3 install "${current_release}"
+
+Refer to `Verifying PyPI and Conda Packages`_ for more details.
+
+Or if you feel lazy and agree that `pip/issues/1035 <https://github.com/pypa/pip/issues/1035>`_
+should be fixed you can also install hlc like this:
+
+.. code-block:: console
+
+   pip3 install hlc
+
 Supersedes
 ----------
 
@@ -92,3 +114,4 @@ License
 .. _parse_windows_dhcp_leases_csv: https://github.com/hamcos/deployment-scripts/tree/master/parse_windows_dhcp_leases_csv
 .. _Makefile: https://github.com/ypid/hlc/blob/master/Makefile
 .. _test_data: https://github.com/ypid/hlc/tree/master/tests/data
+.. _Verifying PyPI and Conda Packages: stuartmumford.uk/blog/verifying-pypi-and-conda-packages.html

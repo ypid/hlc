@@ -46,7 +46,7 @@ check-nose:
 
 .PHONY: fail-when-git-dirty
 fail-when-git-dirty:
-	git diff --quiet
+	git diff --quiet -- tests/data/
 
 .PHONY: check-convert
 check-convert:
@@ -72,7 +72,7 @@ clean:
 
 .PHONY: distclean
 distclean: clean
-	rm -rf build dist .coverage
+	rm -rf build dist dist_signed .coverage
 
 .PHONY: build
 build: setup.py
@@ -85,7 +85,8 @@ release-versionbump: hlc/_meta.py
 
 .PHONY: release-prepare
 release-sign:
-	find dist -type f -regextype posix-extended -regex '^.*(:?\.(:?tar\.gz|whl))$$' -print0 \
+	mv dist dist_signed
+	find dist_signed -type f -regextype posix-extended -regex '^.*(:?\.(:?tar\.gz|whl))$$' -print0 \
 		| xargs --null --max-args=1 $(RELEASE_OPENPGP_CMD) --default-key "$(RELEASE_OPENPGP_FINGERPRINT)" --detach-sign --armor
 	git tag --sign --local-user "$(RELEASE_OPENPGP_FINGERPRINT)" "v$(shell ./setup.py --version)"
 
@@ -98,7 +99,7 @@ pypi-register: build
 
 .PHONY: pypi-register
 pypi-upload: build
-	twine upload -r "$(PYPI_REPO)" dist/*
+	twine upload -r "$(PYPI_REPO)" dist_signed/*
 
 .PHONY: release
 release: release-prepare pypi-upload
