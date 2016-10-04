@@ -3,24 +3,6 @@ hlc
 
 |Build Status| |Version| |License| |Python versions| |dev status| |pypi monthly downloads|
 
-.. |Build Status| image:: https://travis-ci.org/ypid/hlc.svg
-   :target: https://travis-ci.org/ypid/hlc
-
-.. |Version| image:: https://img.shields.io/pypi/v/hlc.svg
-   :target: https://pypi.python.org/pypi/hlc
-
-.. |License| image:: https://img.shields.io/pypi/l/hlc.svg
-   :target: https://pypi.python.org/pypi/hlc
-
-.. |Python versions| image:: https://img.shields.io/pypi/pyversions/hlc.svg
-   :target: https://pypi.python.org/pypi/hlc
-
-.. |dev status| image:: https://img.shields.io/pypi/status/hlc.svg
-   :target: https://pypi.python.org/pypi/hlc
-
-.. |pypi monthly downloads| image:: https://img.shields.io/pypi/dm/hlc.svg
-   :target: https://pypi.python.org/pypi/hlc
-
 | **h**\ ost **l**\ ist **c**\ onveter supporting hosts(5), ethers(5) and other formats.
 
 Python script which can convert different types of host or workstation lists. Refer
@@ -118,3 +100,21 @@ License
 .. _Makefile: https://github.com/ypid/hlc/blob/master/Makefile
 .. _test_data: https://github.com/ypid/hlc/tree/master/tests/data
 .. _Verifying PyPI and Conda Packages: stuartmumford.uk/blog/verifying-pypi-and-conda-packages.html
+
+.. |Build Status| image:: https://travis-ci.org/ypid/hlc.svg
+   :target: https://travis-ci.org/ypid/hlc
+
+.. |Version| image:: https://img.shields.io/pypi/v/hlc.svg
+   :target: https://pypi.python.org/pypi/hlc
+
+.. |License| image:: https://img.shields.io/pypi/l/hlc.svg
+   :target: https://pypi.python.org/pypi/hlc
+
+.. |Python versions| image:: https://img.shields.io/pypi/pyversions/hlc.svg
+   :target: https://pypi.python.org/pypi/hlc
+
+.. |dev status| image:: https://img.shields.io/pypi/status/hlc.svg
+   :target: https://pypi.python.org/pypi/hlc
+
+.. |pypi monthly downloads| image:: https://img.shields.io/pypi/dm/hlc.svg
+   :target: https://pypi.python.org/pypi/hlc
