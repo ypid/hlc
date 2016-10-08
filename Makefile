@@ -3,6 +3,8 @@ NOSE_OPTIONS =
 RELEASE_OPENPGP_FINGERPRINT ?= C505B5C93B0DB3D338A1B6005FE92C12EE88E1F0
 RELEASE_OPENPGP_CMD ?= gpg
 PYPI_REPO ?= pypi
+NOSETESTS ?= $(shell command -v nosetests3 nosetests | head -n 1)
+NOSE2 ?= $(shell command -v nose2-3 nose2-3.4 | head -n 1)
 
 .PHONY: FORCE_MAKE
 
@@ -32,7 +34,6 @@ remove-pre-commit-hook:
 ## }}}
 
 ## check {{{
-## Fail when git working directory for the Make prerequisites has changed.
 .PHONY: check
 check: check-nose check-tox check-convert fail-when-git-dirty
 
@@ -42,7 +43,7 @@ check-tox:
 
 .PHONY: check-nose
 check-nose:
-	(nosetests3 $(NOSE_OPTIONS) || nosetests $(NOSE_OPTIONS))
+	$(NOSETESTS) $(NOSE_OPTIONS)
 
 .PHONY: fail-when-git-dirty
 fail-when-git-dirty:
@@ -60,7 +61,7 @@ check-convert:
 # Does not work on Travis, different versions. Using check-nose for now.
 .PHONY: check-nose2
 check-nose2:
-	(nose2-3 --start-dir tests $(NOSE_OPTIONS) || nose2-3.4 --start-dir tests $(NOSE_OPTIONS))
+	$(NOSE2) --start-dir tests $(NOSE_OPTIONS)
 ## }}}
 
 ## development {{{

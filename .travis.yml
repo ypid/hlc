@@ -13,4 +13,4 @@ install:
   - "pip install -e '.[test]'"
 
 script:
-  - "make check"
+  - "make NOSETESTS=nosetests check"
