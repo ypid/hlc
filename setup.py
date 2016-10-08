@@ -52,7 +52,7 @@ setup(
         'netaddr>=0.7.18',
     ],
     extras_require={
-        'test': ['nose', 'nose2', 'tox'],
+        'test': ['nose', 'nose2', 'tox', 'coverage'],
     },
     entry_points={
         'console_scripts': [

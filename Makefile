@@ -1,5 +1,5 @@
 PIP_OPTIONS =
-NOSE_OPTIONS =
+NOSE_OPTIONS = --with-coverag --cover-package hlc --cover-min-percentage=42
 RELEASE_OPENPGP_FINGERPRINT ?= C505B5C93B0DB3D338A1B6005FE92C12EE88E1F0
 RELEASE_OPENPGP_CMD ?= gpg
 PYPI_REPO ?= pypi
@@ -61,7 +61,7 @@ check-convert:
 # Does not work on Travis, different versions. Using check-nose for now.
 .PHONY: check-nose2
 check-nose2:
-	$(NOSE2) --start-dir tests $(NOSE_OPTIONS)
+	$(NOSE2) --start-dir tests
 ## }}}
 
 ## development {{{
