@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 # https://stackoverflow.com/a/16084844
-__version__ = '0.3.0'
+__version__ = '0.3.1.dev0'
 
 __license__ = 'AGPL-3.0'
 __author__ = 'Robin Schneider <ypid@riseup.net>'
