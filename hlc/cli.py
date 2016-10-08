@@ -66,7 +66,7 @@ def main():
     args_parser.add_argument(
         '-o', '--output-file',
         help="Where to write the output file."
-        " '-' will read from STDIN."
+        " '-' will write to STDOUT."
         " If not given, no final output will be produced.",
     )
     args_parser.add_argument(
