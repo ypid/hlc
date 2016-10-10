@@ -67,7 +67,7 @@ You can install hlc by invoking the following commands:
 
    gpg --recv-keys 'C505 B5C9 3B0D B3D3 38A1  B600 5FE9 2C12 EE88 E1F0'
    mkdir --parent /tmp/hlc && cd /tmp/hlc
-   wget -r -nd -l 1 https://pypi.python.org/pypi/hlc --accept-regex '^https://(test)?pypi.python.org/packages/.*\.whl.*'
+   wget -r -nd -l 1 https://pypi.python.org/pypi/hlc --accept-regex '^https://(test)?pypi\.python\.org/packages/.*\.whl.*'
    current_release="$(find . -type f -name '*.whl' | sort | tail -n 1)"
    gpg -v "${current_release}.asc" && pip3 install "${current_release}"
 
